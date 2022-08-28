@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Survey Completed!{% endblock %} {%
+block content %}
+
+<h1>You've completed the survey, thanks!</h1>
+
+<div>
+  Here are your responses:
+  <ol>
+    {% for response in session["responses"] %}
+    <li>{{response}}</li>
+    {% endfor %}
+  </ol>
+</div>
+
+<a href="/">Back to home!</a>
+
+{% endblock %}
